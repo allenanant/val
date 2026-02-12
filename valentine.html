@@ -529,8 +529,8 @@
     object-fit: cover;
     aspect-ratio: 1;
     border-radius: 14px;
-    opacity: 0;
-    animation: imgReveal 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    opacity: 1;
+    animation: imgReveal 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     border: 2px solid rgba(255,255,255,0.08);
@@ -549,15 +549,15 @@
   }
 
   @keyframes imgReveal {
-    0% { opacity: 0; transform: scale(0) rotate(-15deg); filter: blur(10px) brightness(2); }
-    60% { filter: blur(0px) brightness(1.2); }
-    100% { opacity: 1; transform: scale(1) rotate(0deg); filter: blur(0px) brightness(1); }
+    0% { opacity: 0.01; transform: scale(0.3) rotate(-10deg); }
+    60% { opacity: 0.8; }
+    100% { opacity: 1; transform: scale(1) rotate(0deg); }
   }
 
   .collage-img.feature {
     border: 2px solid rgba(233, 30, 99, 0.5);
     box-shadow: 0 0 25px rgba(233, 30, 99, 0.3);
-    animation: imgReveal 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, featureGlow 3s ease-in-out infinite alternate 2s;
+    animation: imgReveal 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both, featureGlow 3s ease-in-out infinite alternate 2s;
   }
 
   @keyframes featureGlow {
@@ -573,8 +573,8 @@
     border-radius: 14px;
     background: rgba(233, 30, 99, 0.1);
     border: 2px dashed rgba(233, 30, 99, 0.25);
-    animation: imgReveal 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, fillerPulse 2s ease-in-out infinite alternate;
-    opacity: 0;
+    animation: imgReveal 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both, fillerPulse 2s ease-in-out infinite alternate;
+    opacity: 1;
   }
 
   @keyframes fillerPulse {
